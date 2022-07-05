@@ -1,0 +1,140 @@
+$white-color:#fff;
+$black-color:#111;
+$orange-color:#ffa500;
+
+body{
+  background-color: $black-color;
+}
+.container{
+  max-width: 1200px;
+  margin: auto; 
+  color:$white-color;
+
+  span{
+    margin-left: 1rem;
+    margin-right: 0.8rem;
+  }
+
+// filters 
+.container-filters{
+  // border: 1px solid red;
+  position: relative;
+  .title-group{
+   margin: 0;
+  }
+  .filter-sidebar{
+    box-shadow: 1px 1px 5px gray;
+    position: absolute;
+    background-color: $black-color;
+    width: 140px;
+    text-align: center;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-end;
+
+
+    .container-checkbox{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      margin: 1rem 0;
+
+      width: 120px;
+      
+      .checkbox-input{
+        border: 1px solid $orange-color;
+      }
+
+
+      label{
+        font-size: 14px;
+        margin:0.2rem 0
+      }
+    }
+  
+  }
+}
+
+
+// search bars
+  .container-bar{
+    display: grid;
+    grid-template-columns: 15% 85%;
+
+    align-items: center;
+    padding: 1rem;
+    
+    .container-input{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+
+      
+   
+      padding: 0.5rem;
+      max-width: 800px;
+      align-items: center;
+      justify-content: center;
+      
+      .search-bar{
+        width: 90%;
+        min-width:300px ;
+        border: 1px solid $orange-color;
+        border-radius: 5px;
+      }
+    }
+    .input-text{
+      border: none;
+      background-color:transparent;
+      padding: 0.5rem;
+      width: 90%;
+      color: $white-color;
+      outline: none;
+
+  
+    }
+    button{
+      background-color: $orange-color;
+      border: none;
+      padding: 0.5rem;
+      font-weight: bold;
+  
+    }
+  }
+
+
+
+
+// sections
+  .container-card-section{
+    justify-self: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem,1fr));
+    padding: 0 2rem;
+    transition: all 1s;
+    margin-top: 1rem;
+
+    div{
+      text-align: center;
+      
+    }
+   
+    img:hover{
+      transition: all 1s;
+      transform: scale(1.1);
+      cursor: pointer;
+    }
+    
+  }
+  .characters {
+    grid-template-columns: repeat(auto-fit, minmax(10rem,1fr));
+    margin: 2rem 0;
+  }
+  .technologies {
+    grid-template-columns: repeat(auto-fit, minmax(12rem,1fr));
+    margin-top: 1rem;
+  }
+}
